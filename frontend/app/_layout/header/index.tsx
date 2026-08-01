@@ -11,6 +11,7 @@ import Link from "next/link";
 const Header = () => {
   const pathname = usePathname();
   const [hideButton, setHideButton] = useState(false);
+  const [gitStars, setGitStars] = useState(0);
 
   useEffect(() => {
     if (pathname !== "/") {
@@ -38,6 +39,12 @@ const Header = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    fetch("https://api.github.com/repos/krup003/Fileshare-tool-monorepo")
+      .then((res) => res.json())
+      .then((data) => setGitStars(data.stargazers_count));
+  }, []);
 
   return (
     <header className="border-b border-border bg-background/70 backdrop-blur sticky top-0 z-50">
@@ -77,7 +84,7 @@ const Header = () => {
 
               <div className="flex items-center gap-1 rounded-md px-2 py-0.5 text-sm">
                 <Star className="h-4 w-4 text-[#f5c542]" fill="#f5c542" />
-                <span>0</span>
+                <span>{gitStars}</span>
               </div>
             </Link>
           </Button>
