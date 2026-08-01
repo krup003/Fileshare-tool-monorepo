@@ -16,3 +16,5 @@
 
 # OS files
 .DS_Store
+
+!**/.env.example
