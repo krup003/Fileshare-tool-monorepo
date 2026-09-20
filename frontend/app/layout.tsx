@@ -96,7 +96,7 @@ export default function RootLayout({
         <Toaster />
         <Header />
         {children}
-        <GoogleAnalytics gaId="G-5DSDYKJMLN" />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
       </body>
     </html>
   );
