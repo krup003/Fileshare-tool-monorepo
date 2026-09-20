@@ -18,21 +18,22 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://filesharelive.vercel.app"),
   title: {
-    default: "FileShareLive - Secure File Sharing for Developers",
+    default: "FileShareLive - Fast & Secure Online File Share",
     template: "%s | FileShareLive",
   },
   description:
-    "FileShareLive is a fast and secure file sharing tool for developers. Upload, share, password-protect, manage privacy, and delete files easily.",
+    "Upload. Share. Collaborate. Securely share your files with friends and colleagues. Simple, fast, and encrypted online file sharing tool.",
   keywords: [
+    "file share",
     "file sharing",
-    "secure file sharing",
-    "developer tools",
-    "upload files",
-    "password protected files",
-    "file transfer",
     "share files online",
-    "temporary file sharing",
-    "private file sharing",
+    "secure file share",
+    "encrypted file transfer",
+    "fast file share",
+    "upload files",
+    "collaborate online",
+    "free file transfer",
+    "instant file share",
   ],
   authors: [{ name: "FileShareLive" }],
   creator: "FileShareLive",
@@ -41,17 +42,17 @@ export const metadata: Metadata = {
     icon: "/folder.png",
   },
   openGraph: {
-    title: "FileShareLive - Secure File Sharing for Developers",
+    title: "FileShareLive - Fast & Secure Online File Share",
     description:
-      "Upload and share files securely with password protection and privacy control. Built for developers.",
+      "Upload. Share. Collaborate. Securely share your files with friends and colleagues. Simple, fast, and encrypted.",
     url: "https://filesharelive.vercel.app",
     siteName: "FileShareLive",
     images: [
       {
-        url: "/folder.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "FileShareLive Preview",
+        alt: "FileShareLive - Upload, Share, Collaborate Preview",
       },
     ],
     locale: "en_US",
@@ -59,15 +60,21 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FileShareLive - Secure File Sharing",
+    title: "FileShareLive - Fast & Secure Online File Share",
     description:
-      "Fast, secure file sharing with password protection and privacy control.",
-    images: ["/folder.png"],
+      "Upload. Share. Collaborate. Securely share your files with friends and colleagues. Simple, fast, and encrypted.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
     follow: true,
-    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: {
     canonical: "https://filesharelive.vercel.app",
